@@ -163,7 +163,7 @@ menos 5 funcionários para testar os métodos. Você pode apresentar opções pa
 o usuário (para ver informações da empresa e dos funcionários, utilizando os
 métodos criados) e solicitar uma opção para ser executada.
 
-* `ArrayList` é uma classe da biblioteca Java para trabalhar com coleções de 
+(*) `ArrayList` é uma classe da biblioteca Java para trabalhar com coleções de 
 objetos (listas), onde o tamanho da lista pode variar dinamicamente. Possui 
 métodos para tarefas comuns como, por exemplo, inserir, remover elementos, 
 tamanho da lista etc.
