@@ -5,7 +5,11 @@ bin/
 
 # Editor stuff.
 .vscode/
+.settings/
+.classpath
+.project
 
 # Files.
 *.zip
 *.class
+*.pdf
