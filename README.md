@@ -15,6 +15,7 @@ Federal University of ABC (UFABC).
       and Project presentation.
 - **05/06/2019** *(Laboratory)*: [Object-oriented Programming Review].
 - **10/06/2019** *(Theory)*: [Database Review and JDBC].
+- **12/06/2019** *(Laboratory)*: Database.
 
 [Object-oriented Programming Review]: laboratory/2019.06.05/
 [Database Review and JDBC]: laboratory/2019.06.10/
