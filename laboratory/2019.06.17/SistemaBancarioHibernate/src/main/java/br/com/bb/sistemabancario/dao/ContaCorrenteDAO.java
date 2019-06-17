@@ -113,8 +113,8 @@ public class ContaCorrenteDAO {
     EntityManager manager = factory.createEntityManager();
     
     List<ContaCorrente> ccs = manager
-        .createQuery("from ContaCorrente cc where lower(cc.descricao) == lower(:descricao)", ContaCorrente.class)
-        .setParameter("descricao", descricao)
+        .createQuery("from ContaCorrente cc where lower(cc.descricao) like lower(:descricao)", ContaCorrente.class)
+        .setParameter("descricao", "%" + descricao + "%")
         .getResultList();
     
     manager.close();
