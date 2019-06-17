@@ -2,6 +2,7 @@
 slides/
 pdfs/
 bin/
+project/
 
 # Editor stuff.
 .vscode/

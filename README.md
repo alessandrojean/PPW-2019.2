@@ -16,9 +16,34 @@ Federal University of ABC (UFABC).
 - **05/06/2019** *(Laboratory)*: [Object-oriented Programming Review].
 - **10/06/2019** *(Theory)*: [Database Review and JDBC].
 - **12/06/2019** *(Laboratory)*: Database.
+- **17/06/2019** *(Theory)*: [Hibernate].
 
 [Object-oriented Programming Review]: laboratory/2019.06.05/
 [Database Review and JDBC]: laboratory/2019.06.10/
+[Hibernate]: laboratory/2019.06.17/
+
+## Using PostgreSQL with Docker
+
+This repository has a `docker-compose.yml` that setup the [PostgreSQL]
+and the [pgAdmin] from the DockerHub. To use it, make sure you have
+[Docker] and [Docker Compose] installed, and follow the commands below.
+
+```bash
+# To run the database in detached mode.
+$ sudo docker-compose up -d
+# To finish the database container.
+$ sudo docker-compose down
+```
+
+Once the containers have started, you can access pgAdmin at
+`https://localhost:15432` with the user `postgres@postgresql.org`
+and password `postgres`. The PostgreSQL server is available at 
+`localhost:5432` with both user and password `postgres`.
+
+[PostgreSQL]: https://www.postgresql.org/
+[pgAdmin]: https://www.pgadmin.org/
+[Docker]: https://www.docker.com/get-started
+[Docker Compose]: https://docs.docker.com/compose/
 
 ## Bibliography
 
