@@ -25,8 +25,8 @@ Federal University of ABC (UFABC).
 
 ## Using PostgreSQL with Docker
 
-This repository has a `docker-compose.yml` that setup the [PostgreSQL]
-and the [pgAdmin] from the DockerHub. To use it, make sure you have
+This repository has a `docker-compose.yml` that setup the [PostgreSQL],
+[pgAdmin] and [pgweb] from the DockerHub. To use it, make sure you have
 [Docker] and [Docker Compose] installed, and follow the commands below.
 
 ```bash
@@ -39,10 +39,13 @@ $ sudo docker-compose down
 Once the containers have started, you can access pgAdmin at
 `https://localhost:15432` with the user `postgres@postgresql.org`
 and password `postgres`. The PostgreSQL server is available at 
-`localhost:5432` with both user and password `postgres`.
+`test-postgres:5432` with both user and password `postgres`.
+The pgweb client is available at `https://localhost:8081`,
+with no authentication needed.
 
 [PostgreSQL]: https://www.postgresql.org/
 [pgAdmin]: https://www.pgadmin.org/
+[pgweb]: https://sosedoff.github.io/pgweb/
 [Docker]: https://www.docker.com/get-started
 [Docker Compose]: https://docs.docker.com/compose/
 

@@ -24,6 +24,17 @@ services:
     networks:
       - postgres-compose-network
 
+  test-pgweb:
+    image: sosedoff/pgweb
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@test-postgres:5432/postgres?sslmode=disable
+    ports:
+      - "8081:8081"
+    depends_on:
+      - test-postgres
+    networks:
+      - postgres-compose-network
+
 networks:
   postgres-compose-network:
     driver: bridge
