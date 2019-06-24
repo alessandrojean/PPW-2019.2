@@ -30,17 +30,27 @@ dependencies {
   // Use JUnit test framework
   testImplementation 'junit:junit:4.12'
   
-  // Hibernate core
-  compile group: 'org.hibernate', name: 'hibernate-core', version: '5.0.0.Final'
-  
-  // Hibernate EntityManager
-  compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.0.0.Final'
+  // Hibernate ORM.
+  compile 'org.hibernate:hibernate-core:5.4.3.Final'
 
+  // Hibernate EntityManager
+  compile 'org.hibernate:hibernate-entitymanager:5.4.3.Final'
+
+  // Hibernate JPA
+  compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final'
+    
   // PostgreSQL driver.
   compile 'org.postgresql:postgresql:42.2.2'
+}
 
-  // Import javax.xml module (Java 11).
-  compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+jar {
+  manifest {
+    attributes 'Main-Class': 'br.com.bb.sistemabancario.testes.CriaContaCorrente'
+  }
+
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
 }
 
 // Define the main class for the application

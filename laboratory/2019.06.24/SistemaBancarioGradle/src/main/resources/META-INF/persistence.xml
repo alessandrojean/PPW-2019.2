@@ -13,7 +13,7 @@
       <property name="javax.persistence.jdbc.driver"
         value="org.postgresql.Driver" />
       <property name="javax.persistence.jdbc.url"
-        value="jdbc:postgresql://localhost/SistemaBancarioGradle" />
+        value="jdbc:postgresql://postgres/SistemaBancarioGradle" />
       <property name="javax.persistence.jdbc.user"
         value="postgres" />
       <property name="javax.persistence.jdbc.password" 
