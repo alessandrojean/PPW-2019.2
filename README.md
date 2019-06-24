@@ -18,10 +18,12 @@ Federal University of ABC (UFABC).
 - **12/06/2019** *(Laboratory)*: Database.
 - **17/06/2019** *(Theory)*: [Hibernate].
 - **19/06/2019** *(Laboratory)*: Project documentation review.
+- **24/06/2019** *(Theory)*: [Gradle].
 
 [Object-oriented Programming Review]: laboratory/2019.06.05/
 [Database Review and JDBC]: laboratory/2019.06.10/
 [Hibernate]: laboratory/2019.06.17/
+[Gradle]: laboratory/2019.06.24/
 
 ## Using PostgreSQL with Docker
 
