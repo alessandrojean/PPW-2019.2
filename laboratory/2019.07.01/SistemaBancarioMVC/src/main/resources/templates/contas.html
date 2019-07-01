@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+</head>
+<body>
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Contas correntes</h1>
+        <h2 class="subtitle">Listagem de todas as contas do banco de dados</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-three-fifths">
+          <table class="table is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Agência</th>
+                <th>Número</th>
+                <th>Ativa</th>
+                <th>Variação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="contaCorrente : ${ccs}">
+                <td th:text="${contaCorrente.id}"></td>
+                <td th:text="${contaCorrente.agencia}"></td>
+                <td th:text="${contaCorrente.numero}"></td>
+                <td th:text="${contaCorrente.ativa}"></td>
+                <td th:text="${contaCorrente.variacao}"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="column">
+          <form action="save" method="post">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title">Adicionar conta</p>
+              </header>
+              <div class="card-content" style="padding: 1em;">
+                <div class="field">
+                  <div class="field-body">
+                    <div class="field">
+                      <label for="numero" class="label">Número</label>
+                      <div class="control">
+                        <input type="text" class="input" name="numero" id="numero">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label for="agencia" class="label">Agência</label>
+                      <div class="control">
+                        <input type="text" class="input" name="agencia" id="agencia">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="descricao" class="label">Descrição</label>
+                  <div class="control">
+                    <input type="text" class="input" name="descricao" id="descricao">
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="agencia" class="label">Variação</label>
+                  <div class="control">
+                    <input type="number" class="input" name="variacao" id="variacao">
+                  </div>
+                </div>
+                <div class="control">
+                  <label class="radio">
+                    <input type="radio" name="ativa">
+                    Ativa
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="ativa">
+                    Desativa
+                  </label>
+                </div>
+                <div class="field is-grouped is-grouped-right">
+                  <p class="control">
+                    <button type="submit" class="button is-primary">Salvar</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

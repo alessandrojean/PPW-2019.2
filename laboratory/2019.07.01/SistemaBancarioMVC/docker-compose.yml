@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: sistema-bancario-mvc
+    ports:
+      - '8080:8080'
+    depends_on:
+      - postgres
+      - pgadmin
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: 'SistemaBancarioMVC'
+    ports:
+      - '5432:5432'
+    volumes:
+      - database_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'postgres@postgresql.org'
+      PGADMIN_DEFAULT_PASSWORD: 'postgres'
+    ports:
+      - '15432:80'
+    depends_on:
+      - postgres
+
+volumes:
+  database_data:
+    driver: local
