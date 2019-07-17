@@ -22,6 +22,8 @@ Federal University of ABC (UFABC).
 - **26/06/2019** *(Laboratory)*: Project first report review.
 - **01/07/2019** *(Theory)*: [Spring MVC].
 - **03/07/2019** *(Laboratory)*: Project database review.
+- **10/07/2019** *(Theory)*: **First test**.
+- **15/07/2019** *(Theory)*: HTML.
 
 [Object-oriented Programming Review]: laboratory/2019.06.05/
 [Database Review and JDBC]: laboratory/2019.06.10/
